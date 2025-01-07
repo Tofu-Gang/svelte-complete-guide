@@ -1,11 +1,5 @@
 <script>
-    import Counter from "./lib/Counter.svelte";
-    const counterProps = {
-      initialCount: 3,
-      maxCount: 6
-    }
+    import Button from "./lib/Button.svelte";
 </script>
-<Counter {...counterProps} />
-<style>
 
-</style>
+<Button />
