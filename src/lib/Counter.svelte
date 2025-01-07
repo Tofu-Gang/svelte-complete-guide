@@ -1,6 +1,10 @@
 <script>
   let count = 0;
-  let string = `You have clicked ${count} times.`;
+  let string;
+
+  $:  {
+    string = `You have clicked ${count} times.`;
+  }
 
   function increment() {
     count++;
