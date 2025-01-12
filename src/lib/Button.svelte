@@ -1,9 +1,13 @@
 <script>
     export let size = "small";
     export let shadow = false;
+    export let bgColor = "inherit";
+    export let textColor = "inherit";
 </script>
 
-<button class:size-lg={size === "large"}
+<button style:--buttonBgColor={bgColor}
+        style:--buttonTextColor={textColor}
+        class:size-lg={size === "large"}
         class:size-sm={size === "small"}
         class:shadow>
     <slot>Default Text</slot>
@@ -11,9 +15,9 @@
 
 <style lang="scss">
     button {
+        background-color: var(--buttonBgColor);
+        color: var(--buttonTextColor);
         border: none;
-        background-color: #ff3e00;
-        color: #ffffff;
         padding: 15px 20px;
         font-weight: bold;
         border-radius: 5px;
